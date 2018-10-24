@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Model
+{
+    /// <summary>
+    /// 学校类别
+    /// </summary>
+    public class Model_zk_xxlb
+    {
+        #region 字段
+        /// <summary>
+        /// 类别代码
+        /// </summary>
+        private string _lbdm = "";
+        /// <summary>
+        /// 类别名称
+        /// </summary>
+        private string _lbmc = "";
+        #endregion
+
+        #region 构造方法。
+        /// <summary>
+        /// 构造方法。
+        /// </summary>
+        public Model_zk_xxlb() { }
+        #endregion
+
+        #region 属性
+        /// <summary>
+        /// 类别代码
+        /// </summary>
+        public string Lbdm
+        {
+            get { return _lbdm; }
+            set { _lbdm = value; }
+        }
+        /// <summary>
+        /// 类别名称
+        /// </summary>
+        public string Lbmc
+        {
+            get { return _lbmc; }
+            set { _lbmc = value; }
+        }
+        #endregion
+
+    }
+
+}

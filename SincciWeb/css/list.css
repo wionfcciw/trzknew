@@ -1,0 +1,30 @@
+.bluebar { height:4px; background-color: #1860ac; overflow: hidden; margin-top: 10px;}
+.bignews_box { border-top:0px; border-bottom:1px #d4d4d4 solid; border-left:1px #d4d4d4 solid;
+ border-right:1px #d4d4d4 solid; background: url(../images/Img/news_r.gif) no-repeat top right;}
+.new { margin: 0 25px 0 15px; height:30px; line-height: 30px; border-bottom:1px #949494 dotted;}
+.new h2 { font-size: 14px; font-weight: bold;}
+.bignews { padding: 10px 10px;}
+.bignews p{padding:15px 10px 15px 10px; line-height: 20px;}
+.bignews .tit { font-size: 14px; color: red; text-align: center; width: 500px; margin: 0 auto; margin-top:0px;
+ line-height: 22px;}
+.bignews p {
+	margin-top: 15px; line-height: 20px;
+}
+.bignews a { color: red;}
+
+.list { margin-top:13px;height:500px; border:1px #ccc solid; background: url(../images/Img/placard.gif) repeat-x;}
+.listtop { font-size: 14px; font-weight: bold; background: url(../images/Img/placard.jpg) no-repeat;
+	height: 30px; line-height: 30px; padding-left: 10px;}
+.listcontent {width:100%; padding-left:20px;padding-top:10px;padding-right:5px;}
+
+.clearfix{width:100%;float:left; line-height:25px;}
+ .listcontent dl dt { float: left; background: url(../images/Img/square.gif) no-repeat 0 -2px;
+ padding-left: 10px; list-style-type: decimal;width:87%;border-bottom:1px dashed #666666;}
+.listcontent dl dt h3 {font-size: 14px; font-weight: normal; width: 600px; overflow: hidden; 
+text-overflow: ellipsis; white-space: nowrap; line-height: 25px;}
+.listcontent dl dd { float:right; line-height: 25px; color: #666;width:11%;border-bottom:1px dashed #666666;}
+.dashe{width:100%;border-bottom:1px dashed #666666;}
+
+.page { text-align: center; color: #999; margin: 10px 0;margin-top:430px;background-color:Red; }
+.page a { color: #999;}
+.page a:hover,.page span { color: #666;}

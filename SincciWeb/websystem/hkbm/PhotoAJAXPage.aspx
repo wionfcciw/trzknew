@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PhotoAJAXPage.aspx.cs" Inherits="SincciKC.websystem.hkbm.PhotoAJAXPage" %>

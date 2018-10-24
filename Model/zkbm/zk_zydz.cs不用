@@ -1,0 +1,136 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Model
+{
+    /// <summary>
+    /// 志愿定制
+    /// </summary>
+    public class Model_zk_zydz
+    {
+        #region 字段
+        /// <summary>
+        /// -ID自动增长
+        /// </summary>
+        private int _id = 0;
+        /// <summary>
+        /// 批次代码
+        /// </summary>
+        private string _pcdm = "";
+        /// <summary>
+        /// 批次名称
+        /// </summary>
+        private string _pcmc = "";
+        /// <summary>
+        /// 专业数量
+        /// </summary>
+        private int _zysl = 0;
+        /// <summary>
+        /// 是否有专业0没有1有
+        /// </summary>
+        private bool _sfzy = false;
+        /// <summary>
+        /// 专业服从0不服从1 服从
+        /// </summary>
+        private bool _zyfc = false;
+        /// <summary>
+        /// 学校服从0不服从1 服从
+        /// </summary>
+        private bool _xxfc = false;
+        /// <summary>
+        /// 志愿名称
+        /// </summary>
+        private string _zymc = "";
+        /// <summary>
+        /// 父级代码
+        /// </summary>
+        private string _fjdm = "";
+        #endregion
+
+        #region 构造方法。
+        /// <summary>
+        /// 构造方法。
+        /// </summary>
+        public Model_zk_zydz() { }
+        #endregion
+
+        #region 属性
+        /// <summary>
+        /// -ID自动增长
+        /// </summary>
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        /// <summary>
+        /// 批次代码
+        /// </summary>
+        public string Pcdm
+        {
+            get { return _pcdm; }
+            set { _pcdm = value; }
+        }
+        /// <summary>
+        /// 批次名称
+        /// </summary>
+        public string Pcmc
+        {
+            get { return _pcmc; }
+            set { _pcmc = value; }
+        }
+        /// <summary>
+        /// 专业数量
+        /// </summary>
+        public int Zysl
+        {
+            get { return _zysl; }
+            set { _zysl = value; }
+        }
+        /// <summary>
+        /// 是否有专业0没有1有
+        /// </summary>
+        public bool Sfzy
+        {
+            get { return _sfzy; }
+            set { _sfzy = value; }
+        }
+        /// <summary>
+        /// 专业服从0不服从1 服从
+        /// </summary>
+        public bool Zyfc
+        {
+            get { return _zyfc; }
+            set { _zyfc = value; }
+        }
+        /// <summary>
+        /// 学校服从0不服从1 服从
+        /// </summary>
+        public bool Xxfc
+        {
+            get { return _xxfc; }
+            set { _xxfc = value; }
+        }
+        /// <summary>
+        /// 志愿名称
+        /// </summary>
+        public string Zymc
+        {
+            get { return _zymc; }
+            set { _zymc = value; }
+        }
+        /// <summary>
+        /// 父级代码
+        /// </summary>
+        public string Fjdm
+        {
+            get { return _fjdm; }
+            set { _fjdm = value; }
+        }
+        #endregion
+
+    }
+
+}

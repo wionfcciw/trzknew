@@ -1,0 +1,9 @@
+F:\work\project\haiyuntian\Sincci_nt\Model\bin\Release\Model.dll
+F:\work\project\haiyuntian\Sincci_nt\Model\bin\Release\Model.pdb
+F:\work\project\haiyuntian\Sincci_nt\Model\obj\Release\Model.dll
+F:\work\project\haiyuntian\Sincci_nt\Model\obj\Release\Model.pdb
+E:\迅雷下载\铜仁20180802\Model\bin\Release\Model.dll
+E:\迅雷下载\铜仁20180802\Model\bin\Release\Model.pdb
+E:\迅雷下载\铜仁20180802\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+E:\迅雷下载\铜仁20180802\Model\obj\Release\Model.dll
+E:\迅雷下载\铜仁20180802\Model\obj\Release\Model.pdb

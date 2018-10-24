@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCD2F33D-0444-4B42-9551-74EB20928D4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="system\News\PE_NewsCategoryTable.cs" />
+    <Compile Include="system\News\PE_NewsListTable.cs" />
+    <Compile Include="system\Permission.cs" />
+    <Compile Include="system\QueryParam.cs" />
+    <Compile Include="system\Sys_applicationsTable.cs" />
+    <Compile Include="system\sys_EventTable.cs" />
+    <Compile Include="system\Sys_MenuTable.cs" />
+    <Compile Include="system\Sys_moduleTable.cs" />
+    <Compile Include="system\sys_OnlineTable.cs" />
+    <Compile Include="system\sys_PermissionItem.cs" />
+    <Compile Include="system\Sys_PermissionTable.cs" />
+    <Compile Include="system\sys_RoleModuleTable.cs" />
+    <Compile Include="system\sys_RolePermissionTable.cs" />
+    <Compile Include="system\Sys_rolesTable.cs" />
+    <Compile Include="system\Sys_RoleUsertTypeTable.cs" />
+    <Compile Include="system\Sys_ScopeTable.cs" />
+    <Compile Include="system\Sys_SessionEntity.cs" />
+    <Compile Include="system\sys_UserRolesTable.cs" />
+    <Compile Include="system\sys_UserTable.cs" />
+    <Compile Include="system\Sys_UserTypeTable.cs" />
+    <Compile Include="zkbm\ClearField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kdqk.cs" />
+    <Compile Include="zkbm\zk_bjdm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_dyfwh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kcdm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kczw.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kdqkzt.cs" />
+    <Compile Include="zkbm\zk_kd_xx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kscj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kshkcj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_ksSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kstime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_ksxxgl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kszhpj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kszkcj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_kszyxx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_lqk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pctd_tj_Info.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pc_TouDang_gjbkdx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pc_TouDang_jbtj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pc_TouDang_qttj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pc_TouDang_szpj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pc_TouDang_tfgj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pc_TouDang_tfgj_bjkm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_Pc_TouDang_zbs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_szbmsj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_tyxm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_xqdm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_xxdm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zbsxx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zdxx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zdxxLB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zdybz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zkcj.cs" />
+    <Compile Include="zkbm\zk_zsjh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zsxxdm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zydz_dpcxx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zydz_xpcxx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zydz_xq.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zydz_zyxx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zkbm\zk_zyk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zk_kdjkls.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="zkbm\zk_bmd.cs不用" />
+    <None Include="zkbm\zk_xxlb.cs不用" />
+    <None Include="zkbm\zk_zhpjk.cs不用" />
+    <None Include="zkbm\zk_zydz.cs不用" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

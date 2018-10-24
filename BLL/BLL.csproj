@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{644EC2AD-D90A-48DB-9A88-CF2922332389}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\泰州2013.1.7\SincciWeb\bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="DataEncrypt, Version=1.0.1644.31204, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DataEncrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\泰州2013.1.7\SincciWeb\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\SincciWeb\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel">
+      <HintPath>..\..\..\泰州2013.1.7\SincciWeb\bin\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\SincciWeb\bin\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SincciWeb\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SincciWeb\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SincciWeb\bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SincciWeb\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\SincciWeb\bin\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="Pdfizer">
+      <HintPath>..\SincciWeb\bin\Pdfizer.dll</HintPath>
+    </Reference>
+    <Reference Include="PluSoft">
+      <HintPath>..\SincciWeb\bin\PluSoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\..\..\泰州2013.1.7\SincciWeb\bin\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="SincciKC">
+      <HintPath>..\SincciWeb\bin\SincciKC.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UrlRewritingNet.UrlRewriter">
+      <HintPath>..\SincciWeb\bin\UrlRewritingNet.UrlRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bmgl\BLL_xxgl.cs" />
+    <Compile Include="bmgl\BLL_zk_ksxxgl.cs" />
+    <Compile Include="bmsz\BLL_zk_szbmsj.cs" />
+    <Compile Include="bmsz\BLL_zk_szzdybz.cs" />
+    <Compile Include="Classc.cs" />
+    <Compile Include="hkbm\BLL_Hkbm.cs" />
+    <Compile Include="jcsj\BLL_zk_bjdm.cs" />
+    <None Include="jcsj\BLL_zk_bmd.cs不用" />
+    <Compile Include="jcsj\BLL_zk_xxdm.cs" />
+    <Compile Include="jcsj\BLL_zk_kcdm.cs" />
+    <Compile Include="jcsj\BLL_zk_xqdm.cs" />
+    <Compile Include="jcsj\BLL_zk_zdxx.cs" />
+    <None Include="kscj\BLL_zk_zhpjk.cs3" />
+    <Compile Include="kscj\BLL_zk_kscj.cs" />
+    <Compile Include="kscj\BLL_zk_kshkcj.cs" />
+    <Compile Include="kscj\BLL_zk_kszkcj.cs" />
+    <Compile Include="kwgl\BLL_zk_kczw.cs" />
+    <Compile Include="kwgl\BLL_zk_kd.cs" />
+    <Compile Include="kwgl\BLL_zk_kdqk.cs" />
+    <Compile Include="kwgl\BLL_zk_kd_xx.cs" />
+    <Compile Include="news\BLL_news.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="system\BPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\config.cs" />
+    <Compile Include="system\DBcon.cs" />
+    <Compile Include="system\DbfHelper.cs" />
+    <Compile Include="system\Encryption.cs" />
+    <Compile Include="system\EventMessage.cs" />
+    <Compile Include="system\Functions.cs" />
+    <Compile Include="system\Method.cs" />
+    <Compile Include="system\News\NewsManage.cs" />
+    <Compile Include="system\NumberToEnglish.cs" />
+    <Compile Include="system\OnlineDataBase.cs" />
+    <Compile Include="system\Scope_Tree.cs" />
+    <Compile Include="system\SincciLogin.cs" />
+    <Compile Include="system\SPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\ThumbClass.cs" />
+    <Compile Include="system\TreeViweBindDataSource.cs" />
+    <Compile Include="system\UploadClass.cs" />
+    <Compile Include="system\UserData.cs" />
+    <Compile Include="system\ZipClass.cs" />
+    <Compile Include="tyxm\BLL_jsxm.cs" />
+    <Compile Include="tyxm\BLL_tyxm.cs" />
+    <Compile Include="webUI\BLL_Ks_Login.cs" />
+    <Compile Include="webUI\BLL_Ks_PwdEdit.cs" />
+    <Compile Include="webUI\BLL_Ks_Session.cs" />
+    <Compile Include="webUI\systemparam.cs" />
+    <None Include="webUI\zkbm\BLL_zkbm_Input.cs1" />
+    <Compile Include="webUI\zkbm\Bll_zkbm_Time.cs" />
+    <Compile Include="zklq\BLL_byxxlqXx.cs" />
+    <Compile Include="zklq\BLL_LQK_Ks_Xx.cs" />
+    <Compile Include="zklq\BLL_lqtj.cs" />
+    <Compile Include="zklq\BLL_xqlq.cs" />
+    <Compile Include="zklq\BLL_xxlq.cs" />
+    <Compile Include="zklq\BLL_YcZdKzxW.cs" />
+    <Compile Include="zklq\BLL_zc_xq.cs" />
+    <Compile Include="zklq\BLL_zc_xx.cs" />
+    <Compile Include="zklq\BLL_zk_lqk.cs" />
+    <Compile Include="zklq\BLL_zk_Pctd_tj_Info.cs" />
+    <Compile Include="zklq\BLL_zk_PiLiangTouDang.cs" />
+    <Compile Include="zklq\BLL_zxlq_xq.cs" />
+    <Compile Include="zklq\BLL_zxlq_xx.cs" />
+    <Compile Include="zklq\BLL_zzsb_xq.cs" />
+    <Compile Include="zklq\BLL_zzsb_xx.cs" />
+    <Compile Include="zygl\BLL_zk_kszyxx.cs" />
+    <Compile Include="zysz\BLL_zk_hege.cs" />
+    <Compile Include="zysz\BLL_zk_zbsxx.cs" />
+    <Compile Include="zysz\BLL_zk_zsjh.cs" />
+    <Compile Include="zysz\BLL_zk_zsxxdm.cs" />
+    <Compile Include="zysz\BLL_zk_zydz.cs" />
+    <Compile Include="zysz\BLL_zk_zyk.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{E5B54CD1-CB23-45C5-B6BD-426FD7CEACD1}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{CCD2F33D-0444-4B42-9551-74EB20928D4A}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BLL.dll" />
+    <Content Include="bin\Debug\BLL.pdb" />
+    <Content Include="bin\Debug\DAL.dll" />
+    <Content Include="bin\Debug\DAL.pdb" />
+    <Content Include="bin\Debug\Model.dll" />
+    <Content Include="bin\Debug\Model.pdb" />
+    <Content Include="obj\Debug\BLL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\BLL.dll" />
+    <Content Include="obj\Debug\BLL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

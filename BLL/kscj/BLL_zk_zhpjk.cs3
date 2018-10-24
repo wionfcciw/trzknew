@@ -1,0 +1,174 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data.SqlClient;
+using System.Data;
+using DAL;
+using Model;
+namespace BLL
+{
+  public  class BLL_zk_zhpjk
+    {
+
+      private SqlDbHelper_1 _dbHelper = new SqlDbHelper_1();
+        private string error = "";
+        private bool bReturn = false;
+      /// <summary>
+      /// 新增
+      /// </summary>
+      /// <param name="item"></param>
+      /// <returns></returns>
+        public bool Insert_zk_zhpjk(Model_zk_zhpjk item)
+        {
+            string sql = "insert into zk_zhpjk(ksh,szlxdm,pdjg) values(@ksh,@szlxdm,@pdjg)";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@ksh",item.Ksh),
+ 			 new SqlParameter("@szlxdm",item.Szlxdm),
+ 			 new SqlParameter("@pdjg",item.Pdjg)
+			};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+      /// <summary>
+      /// 批量新增
+      /// </summary>
+      /// <param name="Listitem"></param>
+      /// <returns></returns>
+        public bool Insert_zk_zhpjk(List<Model_zk_zhpjk> Listitem)
+        {
+            string sql = "insert into zk_zhpjk(ksh,szlxdm,pdjg) values(@ksh,@szlxdm,@pdjg)";
+            List<SqlParameter> lisP = new List<SqlParameter>();
+            SqlParameter Ksh = new SqlParameter("@ksh", SqlDbType.VarChar);
+            SqlParameter Szlxdm = new SqlParameter("@szlxdm", SqlDbType.VarChar);
+            SqlParameter Pdjg = new SqlParameter("@pdjg", SqlDbType.VarChar);
+            foreach (Model_zk_zhpjk item in Listitem)
+            {
+                Ksh.Value = item.Ksh;
+                Szlxdm.Value = item.Szlxdm;
+                Pdjg.Value = item.Pdjg;
+                lisP.Clear();
+                lisP.Add(Ksh);
+                lisP.Add(Szlxdm);
+                lisP.Add(Pdjg);
+                _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            }
+            if (bReturn) return true;
+            else return false;
+        }
+      /// <summary>
+      /// 查询所有
+      /// </summary>
+      /// <param name="error"></param>
+      /// <param name="bReturn"></param>
+      /// <returns></returns>
+        public DataTable Select_zk_zhpjk(ref string error, ref bool bReturn)
+        {
+            string sql = "select * from zk_zhpjk";
+            DataTable dt = _dbHelper.selectTab(sql, ref   error, ref   bReturn);
+            return dt;
+        }
+      /// <summary>
+      /// 根据报名号查询
+      /// </summary>
+      /// <param name="ksh"></param>
+      /// <param name="error"></param>
+      /// <param name="bReturn"></param>
+      /// <returns></returns>
+        public DataTable Select_zk_zhpjk(string ksh)
+        {
+            Model_zk_zhpjk info = new Model_zk_zhpjk();
+            string sql = "select * from zk_zhpjk where ksh=@ksh";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@ksh",ksh)};
+            DataTable dt = _dbHelper.selectTab(sql, lisP, ref   error, ref   bReturn);
+            return dt;
+        }
+       /// <summary>
+       /// 素质类型代码+报名号查询
+       /// </summary>
+       /// <param name="szlxdm"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public Model_zk_zhpjk Select_zk_zhpjk(Model_zk_zhpjk item)
+        {
+            Model_zk_zhpjk info = new Model_zk_zhpjk();
+            string sql = "select * from zk_zhpjk where szlxdm=@szlxdm and ksh=@ksh";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@szlxdm",item.Szlxdm),new SqlParameter("@ksh",item.Ksh)};
+            DataTable dt = _dbHelper.selectTab(sql, lisP, ref   error, ref   bReturn);
+            if (dt.Rows.Count > 0)
+                info = _dbHelper.DT2EntityList<Model_zk_zhpjk>(dt)[0];
+            return info;
+        }
+      /// <summary>
+      /// 自定义修改
+      /// </summary>
+      /// <param name="set"></param>
+      /// <param name="where"></param>
+      /// <param name="error"></param>
+      /// <param name="bReturn"></param>
+      /// <returns></returns>
+        public bool update_zk_zhpjk(string set, string where)
+        {
+            string sql = "update  zk_zhpjk set " + set + " where " + where;
+            _dbHelper.ExecuteNonQuery(sql, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+      /// <summary>
+        /// 根据报名号+素质类型代码修改
+      /// </summary>
+      /// <param name="item"></param>
+      /// <param name="error"></param>
+      /// <param name="bReturn"></param>
+      /// <returns></returns>
+        public bool update_zk_zhpjk(Model_zk_zhpjk item)
+        {
+            string sql = "update  zk_zhpjk set pdjg=@pdjg where ksh=@ksh and szlxdm=@szlxdm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@szlxdm",item.Szlxdm),
+ 			 new SqlParameter("@pdjg",item.Pdjg),
+ 			 new SqlParameter("@ksh",item.Ksh)
+			};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+      /// <summary>
+      /// 根据报名号删除
+      /// </summary>
+      /// <param name="ksh"></param>
+      /// <param name="error"></param>
+      /// <param name="bReturn"></param>
+      /// <returns></returns>
+        public bool delete_zk_zhpjkKSH(string ksh)
+        {
+            string sql = "delete  zk_zhpjk where ksh=@ksh";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@ksh",ksh)};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+        /// <summary>
+        /// 根据报名号+素质代码删除
+        /// </summary>
+        /// <param name="ksh"></param>
+        /// <param name="error"></param>
+        /// <param name="bReturn"></param>
+        /// <returns></returns>
+        public bool delete_zk_zhpjk(Model_zk_zhpjk item)
+        {
+            string sql = "delete  zk_zhpjk where ksh=@ksh and szlxdm=@szlxdm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@ksh",item.Ksh),new SqlParameter("@szlxdm",item.Szlxdm)};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+
+    }
+}

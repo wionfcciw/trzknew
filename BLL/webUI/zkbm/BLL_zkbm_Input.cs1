@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Text;
+using Model;
+using DAL;
+namespace BLL
+{
+    /// <summary>
+    /// 考生网上报名控制类
+    /// </summary>
+    public class BLL_zkbm_Input
+    {
+
+        /// <summary>
+        /// 查询一个考生信息 返回实体类
+        /// </summary>
+        /// <param name="ksh">报名号</param> 
+        public   Model_zk_ksxxgl SelectKSOne(string ksh)
+        {
+            Model_zk_ksxxgl ksinfo = new Model_zk_ksxxgl();
+
+            string sql = "select * from zk_ksxxgl where ksh=@ksh ";
+
+            List<SqlParameter> lisP = new List<SqlParameter>();
+            SqlParameter lisp_ksh = new SqlParameter("@ksh", SqlDbType.VarChar, 20);
+            lisp_ksh.Value = ksh;
+            lisP.Add(lisp_ksh);
+
+            string error = "";
+            bool bReturn = false;
+            DataTable dt = _dbHelper.selectTab(sql, lisP, ref   error, ref   bReturn);
+            if (dt.Rows.Count > 0)
+            {
+                ksinfo = _dbHelper.DT2EntityList<Model_zk_ksxxgl>(dt)[0];
+            }  
+            return ksinfo;
+        }
+
+
+
+    }
+}

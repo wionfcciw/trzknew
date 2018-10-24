@@ -1,0 +1,197 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DAL;
+using Model;
+using System.Data.SqlClient;
+using System.Data;
+namespace BLL
+{
+   public class BLL_zk_bmd
+    {
+       private SqlDbHelper_1 _dbHelper = new SqlDbHelper_1();
+        private string error = "";
+        private bool bReturn = false;
+       /// <summary>
+       /// 插入毕业中学学校信息
+       /// </summary>
+       /// <param name="item"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public bool Insert_zk_bmd(Model_zk_bmd item)
+        {
+            string sql = "insert into zk_bmd(bmddm,xqdm,bmdmc) values(@bmddm,@xqdm,@bmdmc)";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@bmddm",item.Bmddm),
+ 			 new SqlParameter("@xqdm",item.Xqdm),
+ 			 new SqlParameter("@bmdmc",item.Bmdmc)
+			};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+       /// <summary>
+        /// 批量插入毕业中学学校信息
+       /// </summary>
+       /// <param name="Listitem"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public bool Insert_zk_bmd(List<Model_zk_bmd> Listitem)
+        {
+            string sql = "insert into zk_bmd(bmddm,xqdm,bmdmc) values(@bmddm,@xqdm,@bmdmc)";
+            List<SqlParameter> lisP = new List<SqlParameter>();
+            SqlParameter Bmddm = new SqlParameter("@bmddm", SqlDbType.VarChar);
+            SqlParameter Xqdm = new SqlParameter("@xqdm", SqlDbType.VarChar);
+            SqlParameter Bmdmc = new SqlParameter("@bmdmc", SqlDbType.VarChar);
+            foreach (Model_zk_bmd item in Listitem)
+            {
+                Bmddm.Value = item.Bmddm;
+                Xqdm.Value = item.Xqdm;
+                Bmdmc.Value = item.Bmdmc;
+                lisP.Clear();
+                lisP.Add(Bmddm);
+                lisP.Add(Xqdm);
+                lisP.Add(Bmdmc);
+                _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            }
+            if (bReturn) return true;
+            else return false;
+        }
+       /// <summary>
+       /// 查询毕业中学全部信息
+       /// </summary>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public DataTable Select_zk_bmd(ref string error, ref bool bReturn)
+        {
+            string sql = "select * from zk_bmd";
+            DataTable dt = _dbHelper.selectTab(sql, ref   error, ref   bReturn);
+            return dt;
+        }
+       /// <summary>
+       /// 根据县区代码查询毕业中学
+       /// </summary>
+       /// <param name="xqdm"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public DataTable Select_zk_bmdXq(string xqdm)
+        {
+            Model_zk_bmd info = new Model_zk_bmd();
+            string sql = "select * from zk_bmd where xqdm=@xqdm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@xqdm",xqdm)};
+            DataTable dt = _dbHelper.selectTab(sql, lisP, ref   error, ref   bReturn);
+            
+            return dt;
+        }
+       /// <summary>
+       /// 根据毕业中学代码查询
+       /// </summary>
+       /// <param name="bmddm"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public Model_zk_bmd Select_zk_bmd(string bmddm)
+        {
+            Model_zk_bmd info = new Model_zk_bmd();
+            string sql = "select * from zk_bmd where bmddm=@bmddm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@bmddm",bmddm)};
+            DataTable dt = _dbHelper.selectTab(sql, lisP, ref   error, ref   bReturn);
+            if (dt.Rows.Count > 0)
+                info = _dbHelper.DT2EntityList<Model_zk_bmd>(dt)[0];
+            return info;
+        }
+
+       /// <summary>
+       /// 自定义修改毕业中学信息
+       /// </summary>
+       /// <param name="set"></param>
+       /// <param name="where"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public bool update_zk_bmd(string set, string where)
+        {
+            string sql = "update  zk_bmd set " + set + " where " + where;
+            _dbHelper.ExecuteNonQuery(sql, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+       /// <summary>
+       /// 根据毕业中学代码修改毕业中学信息
+       /// </summary>
+       /// <param name="item"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public bool update_zk_bmd(Model_zk_bmd item)
+        {
+            string sql = "update  zk_bmd set xqdm=@xqdm,bmdmc=@bmdmc where bmddm=@bmddm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@xqdm",item.Xqdm),
+ 			 new SqlParameter("@bmdmc",item.Bmdmc),
+ 			 new SqlParameter("@bmddm",item.Bmddm)
+			};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+        /// <summary>
+        /// 根据毕业中学代码修改毕业中学信息
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="error"></param>
+        /// <param name="bReturn"></param>
+        /// <returns></returns>
+        public bool update_zk_bmdMC(Model_zk_bmd item)
+        {
+            string sql = "update  zk_bmd set bmdmc=@bmdmc where bmddm=@bmddm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 		 
+ 			 new SqlParameter("@bmdmc",item.Bmdmc),
+ 			 new SqlParameter("@bmddm",item.Bmddm)
+			};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+       /// <summary>
+       /// 根据毕业中学代码删除
+       /// </summary>
+       /// <param name="bmddm"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public bool delete_zk_bmd(string bmddm)
+        {
+            string sql = "delete  zk_bmd where bmddm=@bmddm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@bmddm",bmddm)};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+       /// <summary>
+        /// 根据县区代码删除毕业中学
+       /// </summary>
+       /// <param name="xqdm"></param>
+       /// <param name="error"></param>
+       /// <param name="bReturn"></param>
+       /// <returns></returns>
+        public bool delete_zk_bmdXq(string xqdm)
+        {
+            string sql = "delete  zk_bmd where xqdm=@xqdm";
+            List<SqlParameter> lisP = new List<SqlParameter>(){
+ 			 new SqlParameter("@xqdm",xqdm)};
+            _dbHelper.ExecuteNonQuery(sql, lisP, ref error, ref bReturn);
+            if (bReturn) return true;
+            else return false;
+        }
+    }
+}

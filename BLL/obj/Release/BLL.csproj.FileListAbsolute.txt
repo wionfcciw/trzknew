@@ -1,0 +1,2 @@
+F:\work\project\haiyuntian\Sincci_nt\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+E:\迅雷下载\铜仁20180802\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache

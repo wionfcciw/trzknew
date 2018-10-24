@@ -1,0 +1,92 @@
+.mid_l {position:relative; float: left; margin-top: 10px; width:306px;height:280px; 
+	border:1px #ddd solid; overflow: hidden;}
+
+.tab_box { position:relative;}
+.tab_box h3 { text-align: center;}
+.tab_box h3 a{ color: #666; font-size: 12px;line-height: 28px; height:28px;}
+
+.img_box li{position: relative;}
+.img_box li img {width:306px;height:252px;}
+  .pointerd{ cursor:pointer;}
+.num_box {position:absolute; bottom:30px; right:5px;}
+.num_box li {float:left;width:18px;height:16px;line-height: 16px;
+filter:alpha(opacity=80);opacity:0.8;background-color:#686868;color:#fff;text-align:center;cursor:pointer;margin-right:4px;padding-top:2px;overflow:hidden;}
+.num_box li:hover,.num_box li.active{background-color:#ff7e00;}
+.mask {filter:alpha(opacity=40);opacity:0.4;width:100%;height:22px;background-color:#000;position:absolute;bottom:28px;left:0;display:block;}
+
+.mid_c {
+	float: left; margin-top: 10px; background: url(../images/Img/news.gif) no-repeat; 
+	width:427px; height:282px; overflow: hidden;
+}
+.mid_c h2 { font-size: 14px; color: #ea0505; text-align: center; margin-top: 10px; line-height: 20px;}
+.descr { margin-left: 5px; border-bottom:1px #ccc dotted; height: 80px; overflow: hidden;}
+.descr p { padding:15px 10px 15px 10px; line-height: 20px;}
+.mid_c p a {color: #FF0000;}
+dl.big_news { margin:10px 0 0 5px; height: 160px; overflow: hidden;}
+dl.big_news dt { 
+	width: 315px; line-height: 21px; height: 21px; text-overflow: ellipsis; white-space: nowrap;
+	overflow: hidden; background: url(../images/Img/square.gif) no-repeat 0 -2px; margin-left: 10px; 
+	padding-left: 10px; _display: inline;float: left; 
+}
+dl.big_news dd { float: right; clear: none; width: 18%; line-height: 21px; height:21px;
+ _display: inline; color: #999;}
+.pt10 { padding-top: 10px;}
+.placard { float: left; width: 363px; height: 245px; border:1px #cfcfcf solid;}
+.placard .classify { width: 363px; height: 30px; background: url(../images/Img/placard.jpg) no-repeat;}
+.placard .classify h2 {
+	font-size:14px; float: left; color: #333; width: 100px; text-align: center; margin-top: 8px; _display: inline;
+}
+.placard .classify div { float: left; width: 247px; text-align: right; margin: 8px 16px 0 0; _display: inline;}
+.placard .tit ul { margin: 7px 0 0 13px;}
+.placard .tit ul li {
+	width: 330px; line-height: 18px; height: 18px; text-overflow: ellipsis; white-space: nowrap;
+	overflow: hidden; background: url(../images/Img/square.gif) no-repeat 0 -2px; padding-left: 10px;
+}
+.tit .daerror{ text-align:center; vertical-align:middle;margin-top:50px;}
+.county_c {
+	width: 735px; background:url(../images/Img/bar.gif) repeat-x 0px -60px; margin-top: 10px;
+}
+.county_l {
+	height: 27px; background:url(../images/Img/bar.gif) no-repeat;
+}
+.county_r {
+	height:27px; background:url(../images/Img/bar.gif) no-repeat right -30px;
+}
+.county_r h2{
+	font-size:14px; float: left; color: #fff; width: 100px; margin: 7px 0 0 23px; _display: inline;
+}
+.county_r div { float: right; clear: none; text-align: right; margin: 8px 15px 0 0; _display: inline;}
+
+.county_bot { 
+	border-right:1px #a3c2fb solid; border-bottom:1px #a3c2fb solid; border-left:1px #a3c2fb solid; 
+	height: auto;
+}
+.county_bot .left_photo { float: left; border: 1px #a1a1a1 solid; margin: 20px; }
+.county_bot dl { padding-top: 20px;}
+.county_bot dl dt { 
+	float: left; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; 
+	padding-left: 10px;
+}
+.county_bot dl dd {float: none;}
+
+#ds0 { display: block;}
+#ds1 { display: none;}
+#ds2 { display: none;}
+
+.my_consult table{width:65%;float:left; margin-top:20px; line-height:22px;}
+.county_bot .my_consult table dt { float:left; padding: 2px 0;}
+.county_bot dl.county_dl dt {float:left; line-height: 18px;background: none;}
+.county_bot dl.county_dl dd {float:right;width:15%; line-height: 18px;}
+.county_bot dl.consultation dt { line-height: 21px;background: url(../images/Img/square.gif) no-repeat 0 -2px;}
+.county_bot dl.consultation dd { line-height: 21px;}
+.county_bot dl.my_consult dtts { width: 80px;float:left; padding: 2px 0; line-height:20px;}
+.county_bot dl.my_consult dd { padding:2px 0;}
+
+#caTab { width: 271px; height: 25px; background:url(../images/Img/tab.gif) no-repeat 0px 0px; float: left;
+margin: 1px 0 0 90px; text-align: center; padding-left: 10px;}
+#caTab li {width:80px; float: left; line-height: 25px; font-weight: bold;font-size:12px; color: #fff; text-align: center; cursor: pointer;
+}
+
+.consult_inp { border:1px #a1bcd1 solid; height: 20px; line-height:20px;}
+textarea {border:1px #a1bcd1 solid;overflow: auto; width: 300px;}
+.pointerd{ cursor:pointer;}

@@ -1,0 +1,98 @@
+﻿
+.center_box {
+	MARGIN: 0px auto; WIDTH: 989px
+}
+
+.main_left {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; margin-right:14px; WIDTH: 158px; PADDING-RIGHT: 0px; BACKGROUND: #fff; FLOAT: left; PADDING-TOP: 5px
+}
+ 
+.left_menu_fu {
+	BORDER-LEFT: #ffffff 4px solid; WIDTH: 154px; BACKGROUND: #ecf4fc; FLOAT: left; PADDING-TOP: 10px
+}
+
+.left_menu_fu .text {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 124px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 0px
+}
+.left_menu_fu .text .din {
+	BORDER-BOTTOM: #cfdde3 1px solid; PADDING-BOTTOM: 8px; WIDTH: 134px; FLOAT: left
+}
+.left_menu_fu .text .din LI {
+	LINE-HEIGHT: 28px; WIDTH: 134px; FLOAT: left; HEIGHT: 28px
+}
+.left_menu_fu .text .din LI IMG {
+	MARGIN: 4px 8px 0px 10px; FLOAT: left
+}
+.left_menu_fu .text .tian {
+	LINE-HEIGHT: 25px; WIDTH: 134px; FLOAT: left; BORDER-TOP: #ffffff 1px solid; PADDING-TOP: 10px
+}
+.left_menu_fu .text .tian IMG {
+	MARGIN: 4px 8px 0px 10px; FLOAT: left
+}
+.left_menu_fu .zxkf {
+	WIDTH: 154px; FLOAT: left
+}
+ 
+ 
+.main_right {
+	WIDTH: 802px; BACKGROUND: #fff; FLOAT: left; margin-top:5px;
+}
+.main_right .tpic {
+	WIDTH: 792px; PADDING-RIGHT: 10px; FLOAT: right; HEIGHT: 8px
+}
+.main_right .main_box {
+	BORDER-LEFT: #cfdde3 1px solid; PADDING-BOTTOM: 7px; PADDING-LEFT: 20px; WIDTH: 750px; PADDING-RIGHT: 20px; FLOAT: left; BORDER-RIGHT: #cfdde3 1px solid; PADDING-TOP: 7px; _margin-bottom: -8px
+}
+
+
+
+
+.wxgg {
+	WIDTH: 750px; FLOAT: left
+}
+.wxgg .gong {
+	WIDTH: 490px; PADDING-RIGHT: 20px; FLOAT: left
+}
+.wxgg .gong .title {
+	BORDER-BOTTOM: #d1e1ee 1px solid; LINE-HEIGHT: 30px;
+	 PADDING-LEFT: 10px; WIDTH: 460px; BACKGROUND: url(/images/userhome/01/msg.gif) no-repeat 7px 7px; FLOAT: left; HEIGHT: 30px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.wxgg .gong .text {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 440px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 10px
+}
+.wxgg .gong .text LI {
+	LINE-HEIGHT: 30px; WIDTH: 440px; FLOAT: left; HEIGHT: 31px; OVERFLOW: hidden; font-size:13px;
+	padding-left:14px;
+	background:url(../images1/square.gif) no-repeat 2px 12px; border-bottom:1px dashed #cccccc;
+}
+
+
+
+.zyxx_box3 .shiting {
+	BORDER-BOTTOM: #d1e1ee 1px solid; LINE-HEIGHT: 25px; PADDING-LEFT: 10px; WIDTH: 740px; BACKGROUND: #ffffff; FLOAT: left; HEIGHT: 25px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.zyxx_box3 .shiting_text {
+	MARGIN-TOP: 10px; WIDTH: 737px; FLOAT: left; COLOR: #005eac
+}
+
+
+
+
+.cjwt {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 730px; PADDING-RIGHT: 10px; BACKGROUND: #f9f9f9; FLOAT: left; PADDING-TOP: 10px
+}
+.cjwt .text {
+	WIDTH: 710px; PADDING-RIGHT: 20px; FLOAT: left
+}
+.cjwt .text .title {
+	BORDER-BOTTOM: #d1e1ee 1px solid; LINE-HEIGHT: 30px; WIDTH: 730px; HEIGHT: 30px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.cjwt .text .nc {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; PADDING-LEFT: 5px; WIDTH: 500px; PADDING-RIGHT: 5px; FLOAT: left; PADDING-TOP: 5px
+}
+.cjwt .text .nc LI {
+	WIDTH: 125px; FLOAT: left
+}
+ 
+
+.meg{ font-size:26px; line-height:40px; color:#006600; text-align:center}

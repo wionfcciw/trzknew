@@ -1,0 +1,41 @@
+.recommend:after { display:block; content:""; font-size: 0px; height: 0px; clear: both;}
+.recommend {*zoom:1;}
+.w702 { width: 702px;}
+.current { line-height: 20px; height: 20px;}
+
+.article { border:1px solid #5eafe3; border-top: 5px solid #0783d3; padding: 10px 20px;}
+.article h1 { font-size: 2em;  color: #000; text-align: center; line-height: 36px; font-family: "Î¢ÈíÑÅºÚ";
+font-weight: normal;}
+.signature { text-align: center; line-height: 24px; border-bottom: 1px solid #999; padding-top: 20px;}
+.content { font-size: 14px; color:#333; line-height: 26px; margin-top: 20px; padding: 0 10px;}
+.content p { line-height: 26px;}
+.context h2 { font-size: 14px; font-weight: normal; line-height: 26px; color: #103982;}
+.context a {color: #103982;}
+.remark{ background-color:#F7FCFF;border: 1px solid #DCDDDD;  }
+.rightarea { border:1px solid #b3d7ff; margin-top:10px;}
+.rightarea .header{ height: 32px; line-height: 28px; text-indent: 16px; font-size: 14px; font-weight: bold; color: #fff; background: url(../images/container.png) no-repeat 0px -181px;}
+.rightarea .header1{ height: 32px; line-height: 28px; text-indent: 8px; font-size: 14px; font-weight: bold; color: #fff; background: url(../images/container.png) no-repeat 0px -283px;}
+.rightarea ul { margin: 5px 0 0 5px;}
+.rightarea .news li { background: url(../images/blue-square.gif) no-repeat 3px 10px; padding-left: 10px; line-height: 26px; height:26px; overflow: hidden;}
+.rightarea h2 { font-size: 14px; font-weight: normal;}
+.rightarea .horn li { background: url(../images/horn.gif) no-repeat 2px 7px; padding-left: 15px; line-height: 26px; height:26px; overflow: hidden;}
+
+.cover { text-align: center; margin: 0 auto; padding-top:10px;}
+.recommend { margin: 5px 0 0 5px; width: 230px;}
+.recommend .img { float: left; border:1px solid #bbb; padding:1px; margin-right: 5px;}
+.recommend h3 { font-size: 12px; font-weight: normal;}
+.c135c15 a { color: #135c15;}
+
+.bbs { margin-top:15px; border:1px solid #ddd;}
+.bbs .header { height:26px; line-height: 26px; border-bottom:1px dotted #ddd;}
+.bbs .title { float: left; font-size: 14px; font-weight: bold; color: #333; padding-left: 10px;}
+.bbs .more { float: right;}
+.bbs .list { margin: 5px 0 5px 7px;}
+.bbs .list li { line-height: 26px; height: 26px; width: 230px; overflow: hidden;}
+.bbs .list h2 { font-size: 14px; font-weight: normal;}
+.bbs .list span { color: red;}
+
+.share { height:30px; margin: 20px 0;}
+
+.rightads { margin-top: 15px;}
+.rightads img { width: 240px;}

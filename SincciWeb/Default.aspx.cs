@@ -9,7 +9,7 @@ using System.Configuration;
 using BLL.system; 
 namespace SincciKC
 {
-    public partial class Default : SPage //wf 2018-08-16 修改，单点登录统一控制 System.Web.UI.Page
+    public partial class Default : System.Web.UI.Page //wf 2018-08-16 修改，单点登录统一控制 System.Web.UI.Page
     {
         private string dltype = ConfigurationManager.AppSettings["dltype"];
         protected void Page_Load(object sender, EventArgs e)

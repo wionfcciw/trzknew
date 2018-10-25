@@ -760,10 +760,8 @@
     <Content Include="js\swfupload.js" />
     <Content Include="js\URL.js" />
     <Content Include="logfile\UpPhotoLog\admin.txt" />
-    <Content Include="SsoLogin\AutoAddStudent.aspx" />
     <Content Include="SsoLogin\GetAccessToken.aspx" />
     <Content Include="SsoLogin\GetCode.aspx" />
-    <Content Include="SsoLogin\GetStudentCode.aspx" />
     <Content Include="SsoLogin\SSO_Username_Edu_Add.aspx" />
     <Content Include="SsoLogin\SSO_Username_Edu_Edit.aspx" />
     <Content Include="SsoLogin\SSO_Username_Edu_Manage.aspx" />
@@ -1562,13 +1560,6 @@
       <DependentUpon>TelImage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SsoLogin\AutoAddStudent.aspx.cs">
-      <DependentUpon>AutoAddStudent.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SsoLogin\AutoAddStudent.aspx.designer.cs">
-      <DependentUpon>AutoAddStudent.aspx</DependentUpon>
-    </Compile>
     <Compile Include="SsoLogin\GetAccessToken.aspx.cs">
       <DependentUpon>GetAccessToken.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1582,13 +1573,6 @@
     </Compile>
     <Compile Include="SsoLogin\GetCode.aspx.designer.cs">
       <DependentUpon>GetCode.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SsoLogin\GetStudentCode.aspx.cs">
-      <DependentUpon>GetStudentCode.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SsoLogin\GetStudentCode.aspx.designer.cs">
-      <DependentUpon>GetStudentCode.aspx</DependentUpon>
     </Compile>
     <Compile Include="SsoLogin\SSOModel\SchoolAdminJsonEntityPack\SchoolAdminJsonEntity.cs" />
     <Compile Include="SsoLogin\SSOModel\SchoolClassJsonEntityPack\SchoolClassJsonEntity.cs" />

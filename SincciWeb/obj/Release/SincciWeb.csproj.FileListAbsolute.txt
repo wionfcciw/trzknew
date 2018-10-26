@@ -1,3 +1,0 @@
-E:\迅雷下载\铜仁20180802\SincciWeb\obj\Release\SincciWeb.csprojResolveAssemblyReference.cache
-E:\迅雷下载\铜仁20180802\SincciWeb\obj\Release\RdlCompile.cache
-E:\迅雷下载\铜仁20180802\SincciWeb\obj\Release\RdlCompile.compiled

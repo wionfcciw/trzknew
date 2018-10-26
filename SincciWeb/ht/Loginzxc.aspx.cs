@@ -10,6 +10,7 @@ using BLL;
 using System.Data;
 using DAL;
 using System.Net;
+using System.Configuration;
 namespace SincciWeb.ht
 {
     public partial class Loginzxc : System.Web.UI.Page
@@ -31,18 +32,23 @@ namespace SincciWeb.ht
         }
 
 
+        /// <summary>
+        /// 进入单点登录流程，验证平台是否有用户登录，进入平台用户登陆界面
+        /// </summary>
         private  void CheckUserSSOLogin()
         {
             if(SincciLogin.Sessionstu().UserName==null)
             {
                 string html ="http://"+HttpContext.Current.Request.Url.Authority;
-                SqlDbHelper_1 helper = new SqlDbHelper_1();
-                string error = "";
-                bool bReturn = false;
-                string sql = "select redirect_website from Sys_SSOAddress where redirect_code='getcode' ";
+                //地址改为用配置文件来取
+                //SqlDbHelper_1 helper = new SqlDbHelper_1();
+                //string error = "";
+                //bool bReturn = false;
+                //string sql = "select redirect_website from Sys_SSOAddress where redirect_code='getcode' ";
                 //重定向地址,进行认证，认证结束后，仍然需要返回一个特征标志，用来认证是否成功。然后才能获取session。
                 //session中需要加上token的值以及token的时间
-                string address=helper.ExecuteScalar(sql,ref error,ref bReturn).ToString();
+                //string address=helper.ExecuteScalar(sql,ref error,ref bReturn).ToString();
+                string address = ConfigurationManager.AppSettings["codeOfloginPlatform"];
                 address = html + address;
                 //为了验证而产生的一个session
                 Response.Redirect("http://openapi.tredu.gov.cn/authApi/auth/authorize?client_id=1d98bbaa-0507-49f4-a3dc-ddd51f479d86&response_type=code&redirect_uri=" + address);

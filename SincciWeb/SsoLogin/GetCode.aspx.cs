@@ -29,8 +29,10 @@ namespace SincciKC.SsoLogin
             WebClient MyWebClient = new WebClient();
             string error = "";
             bool bReturn = false;
-            string sql = "select redirect_website from Sys_SSOAddress where redirect_code='gettoken'";
-            string address = helper.ExecuteScalar(sql, ref error, ref bReturn).ToString();
+            //此处修改从配置文件中取
+            //string sql = "select redirect_website from Sys_SSOAddress where redirect_code='gettoken'";
+            //string address = helper.ExecuteScalar(sql, ref error, ref bReturn).ToString();
+            string address = ConfigurationManager.AppSettings["tokenOfloginPlatform"];
             address = addresstitle + address;
             //此处必然会有一个code,因为经过了重定向，直接生成。
             string code = Request.QueryString["code"];
@@ -244,56 +246,59 @@ namespace SincciKC.SsoLogin
         private static void LogoutSSO()
         {
             string addresstitle = "http://" + HttpContext.Current.Request.Url.Authority;
-            SqlDbHelper_1 helper = new SqlDbHelper_1();
-            string error = "";
-            bool bReturn = false;
-            string logoutsql = "select redirect_website from Sys_SSOAddress where redirect_code='logout'";
-            string address = helper.ExecuteScalar(logoutsql, ref error, ref bReturn).ToString();
+            //此处修改，用配置文件来进行取得
+            //SqlDbHelper_1 helper = new SqlDbHelper_1();
+            //string error = "";
+            //bool bReturn = false;
+            //string logoutsql = "select redirect_website from Sys_SSOAddress where redirect_code='logout'";
+            //string address = helper.ExecuteScalar(logoutsql, ref error, ref bReturn).ToString();
+            string address = ConfigurationManager.AppSettings["logoutPlatform"];
             address = addresstitle + address;
             System.Web.HttpContext.Current.Response.Write("<script>window.location='http://openapi.tredu.gov.cn/authApi/auth/logout?redirect_uri=" + address + "';</script>");
         }
-        private void StudentLogin(string ksh,string dltype,string token)
-        {
-            BLL_zk_ksxxgl bllxx = new BLL_zk_ksxxgl();
-            Model_zk_ksSession ksSession = new Model_zk_ksSession();
-            Model_zk_ksxxgl ksinfo = new Model_zk_ksxxgl();
-            BLL_zk_kscj bllcj = new BLL_zk_kscj();
+
+        //private void StudentLogin(string ksh,string dltype,string token)
+        //{
+        //    BLL_zk_ksxxgl bllxx = new BLL_zk_ksxxgl();
+        //    Model_zk_ksSession ksSession = new Model_zk_ksSession();
+        //    Model_zk_ksxxgl ksinfo = new Model_zk_ksxxgl();
+        //    BLL_zk_kscj bllcj = new BLL_zk_kscj();
             
-            DataTable dd = bllxx.ViewDisp_Login(ksh, dltype);
-            if(dd.Rows.Count==0||dd.Rows[0]["xm"]=="")
-            {
-                //返回，不允许登录，注销当前秘钥。
-                LogoutSSO();
-            }
-            else
-            {
-                ksinfo = new SqlDbHelper_1().DT2EntityList<Model_zk_ksxxgl>(dd)[0];
-                ksSession.Flag = true;
-                ksSession.ksh = ksinfo.Ksh;
-                ksSession.xm = ksinfo.Xm;
-                ksSession.kaoci = ksinfo.Kaoci + "年";
-                ksSession.Bmdxqdm = ksinfo.Bmdxqdm;
-                ksSession.Bmddm = ksinfo.Bmddm;
-                ksSession.Kslbdm = ksinfo.Kslbdm;
-                ksSession.Bklb = ksinfo.Bklb;
-                ksSession.Jzfp = ksinfo.Jzfp;
-                ksSession.Mzdm = ksinfo.Mzdm;
-                ksSession.Xjtype = ksinfo.Xjtype;
-                DataTable dt = bllcj.zk_cj(ksinfo.Ksh);
-                if (dt.Rows.Count > 0)
-                {
-                    ksSession.Wkzh = dt.Rows[0]["wkzh"].ToString();
-                    ksSession.Dsdj = dt.Rows[0]["dsdj"].ToString();
-                    ksSession.Zhdj = dt.Rows[0]["zhdj"].ToString();
-                    ksSession.Cj = Convert.ToInt32(dt.Rows[0]["zzf"]);
-                }
-                ksSession.Ipaddress = config.GetUserIP();
-                ksSession.Zkzh = ksinfo.Zkzh; 
-                System.Web.HttpContext.Current.Session.Add("kaosheng", ksSession);
-                Session["token"] = token;
-                Response.Redirect("/Default.aspx", false);
-            }
-        }
+        //    DataTable dd = bllxx.ViewDisp_Login(ksh, dltype);
+        //    if(dd.Rows.Count==0||dd.Rows[0]["xm"]=="")
+        //    {
+        //        //返回，不允许登录，注销当前秘钥。
+        //        LogoutSSO();
+        //    }
+        //    else
+        //    {
+        //        ksinfo = new SqlDbHelper_1().DT2EntityList<Model_zk_ksxxgl>(dd)[0];
+        //        ksSession.Flag = true;
+        //        ksSession.ksh = ksinfo.Ksh;
+        //        ksSession.xm = ksinfo.Xm;
+        //        ksSession.kaoci = ksinfo.Kaoci + "年";
+        //        ksSession.Bmdxqdm = ksinfo.Bmdxqdm;
+        //        ksSession.Bmddm = ksinfo.Bmddm;
+        //        ksSession.Kslbdm = ksinfo.Kslbdm;
+        //        ksSession.Bklb = ksinfo.Bklb;
+        //        ksSession.Jzfp = ksinfo.Jzfp;
+        //        ksSession.Mzdm = ksinfo.Mzdm;
+        //        ksSession.Xjtype = ksinfo.Xjtype;
+        //        DataTable dt = bllcj.zk_cj(ksinfo.Ksh);
+        //        if (dt.Rows.Count > 0)
+        //        {
+        //            ksSession.Wkzh = dt.Rows[0]["wkzh"].ToString();
+        //            ksSession.Dsdj = dt.Rows[0]["dsdj"].ToString();
+        //            ksSession.Zhdj = dt.Rows[0]["zhdj"].ToString();
+        //            ksSession.Cj = Convert.ToInt32(dt.Rows[0]["zzf"]);
+        //        }
+        //        ksSession.Ipaddress = config.GetUserIP();
+        //        ksSession.Zkzh = ksinfo.Zkzh; 
+        //        System.Web.HttpContext.Current.Session.Add("kaosheng", ksSession);
+        //        Session["token"] = token;
+        //        Response.Redirect("/Default.aspx", false);
+        //    }
+        //}
 
         private void checkOnline(string U_LoginName, string U_Password, string SessionID)
         {

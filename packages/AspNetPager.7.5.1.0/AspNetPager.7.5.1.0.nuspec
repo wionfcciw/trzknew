@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>AspNetPager</id>
+    <version>7.5.1.0</version>
+    <title>AspNetPager</title>
+    <authors>Webdiyer</authors>
+    <owners>Webdiyer</owners>
+    <licenseUrl>http://en.webdiyer.com/aspnetpager/license/</licenseUrl>
+    <projectUrl>http://en.webdiyer.com/aspnetpager/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AspNetPager is a free custom paging control for ASP.NET web form application. It's one of the most popular ASP.NET third party controls used by chinese ASP.NET developers. AspNetPager was first published in 2003 and had been steadily improved and updated since then.
+
+Online demos: http://en.webdiyer.com/aspnetpager/demos/
+
+Online documentation: http://en.webdiyer.com/aspnetpager/docs/</description>
+    <summary>AspNetPager is a free custom paging control for ASP.NET web form application.</summary>
+    <releaseNotes>Fixed a bug where container tag is not closed if ShowDisabledButtons value is false;</releaseNotes>
+    <copyright>©2002-2015 Webdiyer</copyright>
+    <language>en-US</language>
+    <tags>AspNetPager paging control pagination</tags>
+  </metadata>
+</package>

@@ -1,0 +1,12 @@
+#下面是需要忽略的ignore的提交内容
+bin/
+13/
+14hk/
+App_Data/
+ErrorLog/
+ExportPDF
+pic/
+pictemp/
+obj/
+UploadFile/
+!/SincciWeb/kindeditor/asp.net/bins

@@ -18,6 +18,7 @@ using System.IO;
 using SincciKC.SsoLogin.SSOModel.UserRoleAndDeptJsonEntityPack;
 using System.Configuration;
 using SincciKC.SsoLogin.SSOModel.SchoolAdminJsonEntityPack;
+using SincciKC.SsoLogin.SSOMethod;
 namespace SincciKC.SsoLogin
 {
     public partial class GetCode : System.Web.UI.Page
@@ -37,8 +38,7 @@ namespace SincciKC.SsoLogin
             //此处必然会有一个code,因为经过了重定向，直接生成。
             string code = Request.QueryString["code"];
             string token="";
-            string html = "http://openapi.tredu.gov.cn/authApi/auth/accessToken?client_id=1d98bbaa-0507-49f4-a3dc-ddd51f479d86&client_secret=f60fb940-d7f2-459f-ab08-dc110f9502a3&grant_type=authorization_code&redirect_uri=" + address + "&code=" + code;
-            
+            string html = "http://openapi.tredu.gov.cn/authApi/auth/accessToken?client_id=" + ConfigurationManager.AppSettings["Client-Id"] + "&client_secret=" + ConfigurationManager.AppSettings["Client-Secret"] + "&grant_type=authorization_code&redirect_uri=" + address + "&code=" + code;
             //Response.Redirect(html,false);
 
             Byte[] pageData = MyWebClient.DownloadData(html);
@@ -57,14 +57,17 @@ namespace SincciKC.SsoLogin
                 //返回的school_id与表中的school_id对应。即可完成学校端的登录。
                 //管理员端的目前有问题，后续仍需要再次处理。
                 string htmltemp = "http://openapi.tredu.gov.cn/basedataApi/relRoleMember/getRoleByUserId/" + userid;
-                HttpWebRequest request1 = (HttpWebRequest)WebRequest.Create(htmltemp);
-                request1.Method = "GET";
-                //request1.Headers["Access-Token"] = token;
-                request1.Headers["Client-Id"] = "1d98bbaa-0507-49f4-a3dc-ddd51f479d86";
-                request1.Headers["Client-Secret"] = "f60fb940-d7f2-459f-ab08-dc110f9502a3";
-                HttpWebResponse response1 = (HttpWebResponse)request1.GetResponse();
-                StreamReader responseStream1 = new StreamReader(response1.GetResponseStream());
-                string jsontemp = responseStream1.ReadToEnd();
+                GetDataByPlatform gt = new GetDataByPlatform();
+                //使用方法
+                string jsontemp=gt.GetDataByOnlyAddressInGet(htmltemp);
+                //HttpWebRequest request1 = (HttpWebRequest)WebRequest.Create(htmltemp);
+                //request1.Method = "GET";
+                ////request1.Headers["Access-Token"] = token;
+                //request1.Headers["Client-Id"] = "1d98bbaa-0507-49f4-a3dc-ddd51f479d86";
+                //request1.Headers["Client-Secret"] = "f60fb940-d7f2-459f-ab08-dc110f9502a3";
+                //HttpWebResponse response1 = (HttpWebResponse)request1.GetResponse();
+                //StreamReader responseStream1 = new StreamReader(response1.GetResponseStream());
+                //string jsontemp = responseStream1.ReadToEnd();
                 SchoolAdminJsonEntity saje = JsonConvert.DeserializeObject<SchoolAdminJsonEntity>(jsontemp);
                 if (saje.pageInfo.list.Count > 0)
                 {

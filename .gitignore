@@ -9,4 +9,7 @@ pic/
 pictemp/
 obj/
 UploadFile/
+tmpUpLoadFile/
+logfile/
+images/
 !/SincciWeb/kindeditor/asp.net/bin/LitJSON.dll
